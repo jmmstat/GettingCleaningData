@@ -3,12 +3,12 @@
 ## After the data were downloaded and unzipped, they were read into R as numeric data frames 
 ## with code supplied by R-Studio's "Import Dataset" feature:
 ##
-##X_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/X_train.txt", quote="\"")
-##y_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/y_train.txt", quote="\"")
-##X_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/X_test.txt", quote="\"")
-##y_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/y_test.txt", quote="\"")
-##subject_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/subject_train.txt", quote="\"")
-##subject_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/subject_test.txt", quote="\"")
+X_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/X_train.txt", quote="\"")
+y_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/y_train.txt", quote="\"")
+X_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/X_test.txt", quote="\"")
+y_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/y_test.txt", quote="\"")
+subject_train <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/train/subject_train.txt", quote="\"")
+subject_test <- read.table("~/Coursera/DataScientist/Course 3/Project/R/UCI HAR Dataset/test/subject_test.txt", quote="\"")
 ##
 ## In order to avoid possible confusion from the variables in each file named "V1" we rename:
 ##
@@ -49,7 +49,7 @@
 ##
   meansd <- total[,c(564:562,goodind)]
 ##
-## Then, we finish off the naming with some factor level labels
+## Thirdly, we finish off the naming with some factor level labels
 ##  
   meansd$Group <- factor(meansd$Group,labels = c("Test","Train"))
   meansd$Activity <- factor(meansd$Activity, labels = c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
